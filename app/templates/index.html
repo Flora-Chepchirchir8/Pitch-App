@@ -1,0 +1,106 @@
+{% extends 'base.html'%} {% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %} {% block content %}
+
+<body>
+    <br>
+    <div class="container">
+        <h1 class="text-center fs-1 fw-bold">SiR FELIX Pitches HubSpot</h1>
+        <h3 class="text-center fs-3">In this application you will be able to add your pitches and other user will have a chance to view it and comment to on it as they vote on it too and the pitches are categorized in different field.</h3>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-4">
+                <div class="card text-center">
+                    <div class="card-header fs-1 fw-bold">
+                        Inspirational Hub
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fs-3"> <strong>Inspirational Pitches </strong> <br><br> Are you low? Do not worry you gonna inspired.</h5>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+                        <button type="button" class="btn btn-outline-primary"><a href="/categories/inspiration">Read Pitches</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="card text-center">
+                    <div class="card-header fs-1 fw-bold">
+                        Pick-Up Spot
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-titlen fs-3"> <strong>Pick-Up Pitches </strong> <br> <br>You Want to win her/him heart??</h5>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+                        <button type="button" class="btn btn-outline-primary"><a href="/categories/pickup_lines">Read Pitches</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="card text-center">
+                    <div class="card-header fs-1 fw-bold">
+                        Memes Hub
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fs-3"> <strong>Memes Pitches</strong> <br> <br>Don't feel bored, Just get some memes vybe.</h5>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+                        <button type="button" class="btn btn-outline-primary"><a href="/categories/memes">Read Pitches</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-4">
+                <div class="card text-center">
+                    <div class="card-header fs-1 fw-bold">
+                        LoVe Spot
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fs-3"> <strong>LoVe Pitches</strong> <br> <br>Live, Love and Laugh to Make your soul happy.</h5>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+                        <button type="button" class="btn btn-outline-primary"><a href="/categories/love">Read Pitches</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="card text-center">
+                    <div class="card-header fs-1 fw-bold">
+                        Religious Hub
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fs-3"> <strong>Religious Pitches</strong> <br> <br>Live, Love and Laugh to Make your soul happy.</h5>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+                        <button type="button" class="btn btn-outline-primary"><a href="/categories/religious">Read Pitches</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="card text-center">
+                    <div class="card-header fs-1 fw-bold">
+                        Sporty Spot
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title fs-3"> <strong>Sport Pitches</strong> <br> <br>Live, Love and Laugh to Make your soul happy.</h5>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
+                        <button type="button" class="btn btn-outline-primary"><a href="/categories/sporty">Read Pitches</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock%}
+</body>
