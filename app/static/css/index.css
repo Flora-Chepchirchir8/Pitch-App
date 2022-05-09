@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Dosis:wght@200;300;400;500;600;700&family=Lobster&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600&display=swap');
 body {
-    background-color: rgb(250, 246, 250);
+    background-color: rgb(153, 239, 245);
     height: 100vh;
     width: 100%;
+    font-family: 'Roboto Flex', sans-serif;
 }
