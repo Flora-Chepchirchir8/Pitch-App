@@ -2,7 +2,7 @@
 
 
 ## Author
-Flora Chepchirchir
+# Flora Chepchirchir
 ## Project description
 
 In life, you only have 60 seconds to impress someone. 1 minute can make or break you. This is an app that allows you to make a pitch, other users can downvote or upvote it and leave comments 
@@ -55,8 +55,8 @@ command to run your application
 
 ## Contact me
   bn.flora254@gmail.com
-  +254 791 944 831
   
+
 ## LICENSE
 Copyright 2022 Flora Chepchirchir.
 
