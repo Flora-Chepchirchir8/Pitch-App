@@ -28,7 +28,7 @@ A user should be able to:
 $ python3 -m venv virtual
 $ source virtual/bin/activate
 
-$ git clone the live link of the pitches app above
+$ git clone  https://assorted-pitches-app.herokuapp.com/
 - Navigate into the cloned project.
 
 - Install all the necessary modules using requiments.txt 
