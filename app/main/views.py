@@ -13,7 +13,7 @@ def index():
     
     '''
     message= "Hello"
-    title= 'SiR FELIX Pitch Hub :::'
+    title= 'LORA PITCH-APP'
     return render_template('index.html', message = message,title=title)
 
 @main.route('/pitch/', methods = ['GET','POST'])

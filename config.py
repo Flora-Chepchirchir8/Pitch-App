@@ -2,7 +2,7 @@ import os
 
 class Config:
 
-    SECRET_KEY = 'f2GDBACdGn5ZGx$A!gC[:+*/b.JS?('
+    SECRET_KEY='lk2DBACdGn5ZGdfyjkYjkSd@JS70'
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/pitches'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
 
@@ -27,13 +27,13 @@ class ProdConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
     
-    #  uri = os.getenv('DATABASE_URL')
-    #  if uri and uri.startswith('postgres://'):
-    #     uri = uri.replace('postgres://', 'postgresql://', 1)
+    uri = os.getenv('DATABASE_URL')
+    if uri and uri.startswith('postgres://'):
+         uri = uri.replace('postgres://', 'postgresql://', 1)
         
-    #     SQLALCHEMY_DATABASE_URI=uri
-    # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    pass
+         SQLALCHEMY_DATABASE_URI=uri
+    
+ 
 
 class TestConfig(Config):
 
