@@ -1,9 +1,10 @@
 from flask import render_template,request,redirect,url_for,abort
 from flask_login import login_required,current_user
-from ..models import Pitches, User, Comments, Upvote, Downvote
+from ..models import Blogs, User, Comments
 from . import main
 from .. import db,photos
 from .forms import PitchForm, CommentForm, UpdateProfile
+from app.requests import get_quote
 
 
 @main.route('/')
@@ -12,9 +13,9 @@ def index():
     index page
     
     '''
-    message= "Hello"
-    title= 'LORA PITCH-APP'
-    return render_template('index.html', message = message,title=title)
+    Quote= get_quote()
+    title= 'LORA BLOG-APP'
+    return render_template('index.html', Quote=Quote, title=title)
 
 @main.route('/pitch/', methods = ['GET','POST'])
 @login_required

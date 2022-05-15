@@ -2,10 +2,11 @@ import os
 
 class Config:
 
-    SECRET_KEY='lk2DBACdGn5ZGdfyjkYjkSd@JS70'
-    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/pitches'
-    SQLALCHEMY_DATABASE_URI = 'postgres://eefvuyzaqztftv:ad1b1a3fec78e2ef63f6f5d77906fe9657a3eb89725b31e8845639389cbdee66@ec2-54-158-247-210.compute-1.amazonaws.com:5432/d7bf9drp975ag7'
+    SECRET_KEY='Hyu782DBACdGn5ZGdfyjkYlhSd@JS70'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Chirry@localhost/blogpost'
+    QUOTE_API_BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
+   
 
     #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
@@ -28,13 +29,13 @@ class ProdConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
     
-    uri = os.getenv('DATABASE_URL')
-    if uri and uri.startswith('postgres://'):
-         uri = uri.replace('postgres://', 'postgresql://', 1)
+    # uri = os.getenv('DATABASE_URL')
+    # if uri and uri.startswith('postgres://'):
+    #      uri = uri.replace('postgres://', 'postgresql://', 1)
         
-         SQLALCHEMY_DATABASE_URI=uri
+    #      SQLALCHEMY_DATABASE_URI=uri
     
- 
+    pass
 
 class TestConfig(Config):
 

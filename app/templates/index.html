@@ -11,71 +11,27 @@
     <br>
     <div class="container">
         <div class="row">
-            <div class="col-6 col-md-6">
+            <div class="col-12 col-md-12">
                 <div class="card text-center">
                     <div class="card-header fs-1 fw-bold">
                         Inspirational Hub
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title fs-3"> <strong>Inspirational Pitches </strong> <br><br>“Just one small positive thought in the morning can change your whole day.” </h5>
+                        <p>{{Quote.quote}}</p>
+                        <h5>{{Quote.author}}</h5>
+                      
                     </div>
                     <div class="card-footer text-muted">
-                        <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
-                        <button type="button" class="btn btn-outline-primary"><a href="/categories/inspiration">Read Pitches</a></button>
+                        <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Blog</a></button>
+                        <button type="button" class="btn btn-outline-primary"><a href="/categories/inspiration">View Blogs</a></button>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-6">
-                <div class="card text-center">
-                    <div class="card-header fs-1 fw-bold">
-                        Pick-Up Spot
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-titlen fs-3"> <strong>Pick-Up Pitches </strong> <br> <br>Are you a parking ticket? Cause you've got fine written all over you.</h5>
-                    </div>
-                    <div class="card-footer text-muted">
-                        <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
-                        <button type="button" class="btn btn-outline-primary"><a href="/categories/pickup_lines">Read Pitches</a></button>
-                    </div>
-                </div>
-            </div>
+            
          
         </div>
     </div>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-6 col-md-6">
-                <div class="card text-center">
-                    <div class="card-header fs-1 fw-bold">
-                        Love Spot
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title fs-3"> <strong>Love Pitches</strong> <br> <br>Live, Love and Laugh to Make your soul happy.</h5>
-                    </div>
-                    <div class="card-footer text-muted">
-                        <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
-                        <button type="button" class="btn btn-outline-primary"><a href="/categories/life">Read Pitches</a></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-md-6">
-                <div class="card text-center">
-                    <div class="card-header fs-1 fw-bold">
-                        Elavator 
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title fs-3"> <strong>Elavator pitch</strong> <br> <br>The elevator is going up.</h5>
-                    </div>
-                    <div class="card-footer text-muted">
-                        <button type="button" class="btn btn-outline-primary"><a href="../pitch/">Add Pitch</a></button>
-                        <button type="button" class="btn btn-outline-primary"><a href="/categories/coding">Read Pitches</a></button>
-                    </div>
-                </div>
-            </div>
-          
-        </div>
-    </div>
+    
     {% endblock%}
  
 </body>
