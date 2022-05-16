@@ -116,5 +116,5 @@ def new_comment(pitches_id):
         new_comment.save_comment()
 
         return redirect(url_for('main.index'))
-    title='New Pitch'
+    title='New Blog'
     return render_template('new_comment.html',title=title,comment_form = form,pitches_id=pitches_id)

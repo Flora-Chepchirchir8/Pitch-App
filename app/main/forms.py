@@ -5,7 +5,7 @@ from wtforms.validators import DataRequired
 
 class PitchForm(FlaskForm):
     title = StringField('Blog Title')
-    category = SelectField(u'Blog Category', choices=[('inspiration', 'Blog'))])
+    # category = SelectField(u'Blog Category', choices=[('inspiration', 'Blog')])
     pitch = TextAreaField('Blog content')
     submit = SubmitField('Submit')
 
