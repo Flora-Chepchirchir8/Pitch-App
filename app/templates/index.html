@@ -1,10 +1,10 @@
 {% extends 'base.html'%} {% block styles%} {{ super() }}
 <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> {% endblock %} {% block content %}
 
-<body>
+<body style="background-image: url(../static/images/background.jpg);">
     <br>
     <div class="container">
-        <h1 class="text-center fs-1 fw-bold">LORA PITCH-APP</h1>
+        <h1 class="text-center fs-1 fw-bold">LORA BLOG</h1>
         <h3 class="text-center fs-4"> {{Quote.quote}}</h3>
             <h5 class="text-center fs-2">Author: {{Quote.author}}</h5>
     </div>
