@@ -17,7 +17,7 @@ class User(UserMixin,db.Model):
     password_hash = db.Column(db.String(255))
     bio = db.Column(db.String(255))
     profile_pic_path = db.Column(db.String())
-    blog = db.relationship('Blogs', backref='author', lazy='dynamic')
+    pitch = db.relationship('Pitches', backref='author', lazy='dynamic')
     comments = db.relationship('Comments', backref='author', lazy='dynamic')
 
     @property
@@ -34,34 +34,34 @@ class User(UserMixin,db.Model):
     def __repr__(self):
         return f'Author: {self.author}'
 
-class Blogs(db.Model):
-    __tablename__= 'blogs'
+class Pitches(db.Model):
+    __tablename__= 'pitches'
     id = db.Column(db.Integer,primary_key = True)
     title = db.Column(db.String(255))
     category = db.Column(db.String(255))
-    blog = db.Column(db.String(255))
+    pitch = db.Column(db.String(255))
     date = db.Column(db.DateTime(250), default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
     comments = db.relationship('Comments', backref='title', lazy='dynamic')
      
-    def save_blogs(self):
+    def save_pitch(self):
         db.session.add(self)
         db.session.commit()
 
     @classmethod
-    def get_blogs(cls,cate):
-        blog = Blogs.query.filter_by(category=cate).all()
-        return blog
+    def get_pitches(cls,cate):
+        pitch = Pitches.query.filter_by(category=cate).all()
+        return pitch
 
     def __repr__(self):
-        return f"blog {self.blog}','{self.date}')"
+        return f"Pitches {self.pitch}','{self.date}')"
 
 class Comments(db.Model):
     __tablename__ = 'comments'
     id = db.Column(db.Integer, primary_key=True)
     comment = db.Column(db.String(255))
     date_posted = db.Column(db.DateTime(250), default=datetime.utcnow)
-    blogs_id = db.Column(db.Integer, db.ForeignKey("blogs.id"))
+    pitches_id = db.Column(db.Integer, db.ForeignKey("pitches.id"))
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
 
     def save_comment(self):
@@ -70,11 +70,12 @@ class Comments(db.Model):
 
     @classmethod
     def get_comment(cls,id):
-        comments = Comments.query.filter_by(blogs_id=id).all()
+        comments = Comments.query.filter_by(pitches_id=id).all()
         return comments
 
     def __repr__(self):
         return f"Comments('{self.comment}', '{self.date_posted}')"
+
 
 class Quote:
     '''
